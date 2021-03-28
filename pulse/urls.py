@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from base import views
+from account import views
+from graphene_django.views import GraphQLView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.loginPage, name='login'),
     path('home/',views.home, name='home'),
+    path('graphql/', GraphQLView.as_view(graphiql=True)),
     path('logout/', views.logoutUser, name='logout'),
 ]

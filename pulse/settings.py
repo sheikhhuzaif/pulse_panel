@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'graphene_django',
+    'account',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
@@ -71,7 +74,10 @@ WSGI_APPLICATION = 'pulse.wsgi.application'
 STATICFILES_DIRS=[
     BASE_DIR/"static",
 ]
-
+GRAPHENE = {
+    "SCHEMA": "pulse.graphql.schema.schema",
+    "ATOMIC_MUTATIONS": True,
+}
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 

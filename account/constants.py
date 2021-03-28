@@ -1,0 +1,11 @@
+STUDENT='Student'
+TEACHER='Teacher'
+MANAGER='Manager'
+
+
+
+USER_TYPE_CHOICES=(
+    (STUDENT,STUDENT),
+    (TEACHER,TEACHER),
+    (MANAGER,MANAGER),
+)
